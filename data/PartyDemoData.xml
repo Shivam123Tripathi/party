@@ -1,0 +1,32 @@
+<entity-facade-xml type="demo">
+
+    <!-- Person Data -->
+    <party.Party partyId="P1" partyTypeEnumId="PERSON"/>
+    <party.Person partyId="P1" firstName="Shivam" lastName="Tripathi"/>
+
+    <!-- Party Group Data -->
+    <party.Party partyId="G1" partyTypeEnumId="PARTY_GROUP"/>
+    <party.PartyGroup partyId="G1" groupName="Hotwax commerce pvt. ltd."/>
+
+
+    <!-- Contact Mechanism  -->
+    <party.ContactMech contactMechId="C1"
+                       contactMechTypeEnumId="EMAIL"
+                       infoString="shivam@example.com"/>
+
+    <party.ContactMech contactMechId="C2"
+                       contactMechTypeEnumId="TELECOM_NUMBER"
+                       infoString="7509241744"/>
+
+    <!-- Link -->
+    <party.PartyContactMech partyId="P1" contactMechId="C1"
+                            fromDate="2026-01-01T00:00:00"/>
+
+    <party.PartyContactMech partyId="P1" contactMechId="C2"
+                            fromDate="2026-01-01T00:00:00"/>
+
+</entity-facade-xml>
+
+
+
+<!--added demo data for party and then linked them up -->
