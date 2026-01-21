@@ -3,7 +3,7 @@
 <screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
         require-authentication="anonymous-all">
-<!--    include-child-content="true">   -->
+
 
 
 
@@ -30,7 +30,7 @@
                 <form-single name="CreatePartyForm"
                              transition="createParty">
                     <auto-fields-entity entity-name="party.Party"
-                                        field-type="edit"/>
+                                        field-type="edit" include="all"/>
 
                     <field name="submitButton">
                         <default-field title="Create Party">
@@ -43,13 +43,9 @@
             </container-dialog>
 
 
-
-
-
             <label text="Party Screen" type="h1"/>
                 
 
-                
                 <label text="Party List" type="h3"/>
                 <form-list name="PartyList" list="partyList">
                     <auto-fields-entity entity-name="party.Party" field-type="display"/>
